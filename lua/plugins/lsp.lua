@@ -4,6 +4,11 @@ return {
     ---@class PluginLspOpts
     opts = {
       servers = {
+        ["*"] = {
+          keys = {
+            { "K", vim.lsp.buf.hover, desc = "Hover" },
+          },
+        },
         gopls = {
           settings = {
             gopls = {
@@ -49,6 +54,13 @@ return {
       -- },
     },
   },
+  -- {
+  --   "nvim-java/nvim-java",
+  --   config = function()
+  --     require("java").setup()
+  --     vim.lsp.enable("jdtls")
+  --   end,
+  -- },
   {
     "mfussenegger/nvim-lint",
     opts = {
